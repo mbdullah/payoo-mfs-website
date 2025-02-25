@@ -8,8 +8,99 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
-        
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-100">
+        <header>
+            <nav class="flex justify-around items-center bg-base-100 py-5">
+                <img class="w-16" src="./assets/Group.png" alt="">
+                <div>
+                    <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
+                    <p class="border rounded p-1">Available Balance</p>
+                </div>
+                <button class="btn">LogOut</button>
+            </nav>
+            <section class="pt-10 px-2 bg-base-100 mt-[1px]">
+                <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                <div class="cards grid grid-cols-3 mt-14 gap-2 pb-10">
+                    <div id="addmoney-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer">
+                        <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
+                        <p>Add Money</p>
+                    </div>
+                    <div id="cashout-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer">
+                        <img class="w-8 mx-auto" src="./assets/money1.png" alt="">
+                        <p>Cashout</p>
+                    </div>
+                    <div class="text-center box border-[2px] border-gray-200 rounded-[12px] py-4 px-2 cursor-pointer">
+                        <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
+                        <p>Transfer Money</p>
+                    </div>
+                    <div class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer">
+                        <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
+                        <p>Get Bonus</p>
+                    </div>
+                    <div class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer">
+                        <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
+                        <p>Pay Bill</p>
+                    </div>
+                    <div class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer">
+                        <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
+                        <p>Transactions</p>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section id="add-money-box" class="mt-10">
+            <h3 class="text-lg font-semibold px-8">Add Money</h3>
+            <div>
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="card w-full max-w-sm bg-base-100 rounded-2xl">
+                    <form class="card-body">
+                        <fieldset class="fieldset">
+                            <legend class="fieldset-legend text-gray-500">Select Bank</legend>
+                            <select class="select border-none bg-gray-100 rounded-3xl">
+                              <option disabled selected>Pick a option</option>
+                              <option>Bikash</option>
+                              <option>Nagod</option>
+                              <option>SIBL</option>
+                            </select>
+                          </fieldset>
+                      <fieldset class="fieldset">
+                        <label class="fieldset-legend fieldset-label">Bank Acount Number</label>
+                        <input value="01927785731" id="account-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 11 digit account number" required/>
+                        <label class="fieldset-legend fieldset-label">Amount to Add</label>
+                        <input id="amount" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Add Amount to withdraw" required/>
+                        <label class="fieldset-legend fieldset-label">Pin Number</label>
+                        <input id="pin-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 4 digit pin number" required />
+                        <button id="addmoney-btn" class="btn btn-neutral mt-4 bg-blue-800 border-none rounded-3xl">Add Money</button>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>  
+        </section>
+        <section id="cash-out-box" class="mt-10">
+            <h3 class="text-lg font-semibold px-8">Cash Out</h3>
+            <div>
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="card w-full max-w-sm bg-base-100 rounded-2xl">
+                    <form class="card-body">
+                      <fieldset class="fieldset">
+                        <label class="fieldset-legend fieldset-label">Agent Number</label>
+                        <input id="account-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 11 digit account number" required/>
+                        <label class="fieldset-legend fieldset-label">Amount</label>
+                        <input id="amount" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Add Amount to withdraw" required/>
+                        <label class="fieldset-legend fieldset-label">Pin Number</label>
+                        <input id="pin-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 4 digit pin number" required />
+                        <button id="addmoney-btn" class="btn btn-neutral mt-4 bg-blue-800 border-none rounded-3xl">Withdraw Money</button>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div> 
+        </section>
     </section>
+
+    <script src="./script/addmoney.js"></script>
+    <script src="./script/toggle.js"></script>
 </body>
 </html>
