@@ -9,7 +9,7 @@ document.getElementById('login-btn').addEventListener('click', function (event) 
             window.location.href = "./main.html"
         }
         else{
-            alert('need valid 4 digit pin number');
+            alert('need valid 1234 pin number');
         }
     }
     else{
