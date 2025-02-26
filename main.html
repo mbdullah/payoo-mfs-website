@@ -43,7 +43,7 @@
                         <p>Pay Bill</p>
                     </div>
                     <div class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-gray-100">
-                        <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
+                        <img id="transactions-card" class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
                         <p>Transactions</p>
                     </div>
                 </div>
@@ -57,9 +57,9 @@
                     <form class="card-body">
                         <fieldset class="fieldset">
                             <legend class="fieldset-legend text-gray-500">Select Bank</legend>
-                            <select class="select border-none bg-gray-100 rounded-3xl">
+                            <select id="selected-bank" class="select border-none bg-gray-100 rounded-3xl">
                               <option disabled selected>Pick a option</option>
-                              <option>Bikash</option>
+                              <option>Bkash</option>
                               <option>Nagod</option>
                               <option>SIBL</option>
                             </select>
@@ -78,6 +78,7 @@
                 </div>
               </div>  
         </section>
+
         <section id="cash-out-box" class="mt-10">
             <h3 class="text-lg font-semibold px-8">Cash Out</h3>
             <div>
@@ -86,7 +87,7 @@
                     <form class="card-body">
                       <fieldset class="fieldset">
                         <label class="fieldset-legend fieldset-label">Agent Number</label>
-                        <input value="02302302302" id="account-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 11 digit account number" required/>
+                        <input value="02302302302" id="agent-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 11 digit account number" required/>
                         <label class="fieldset-legend fieldset-label">Amount</label>
                         <input id="cashout-amount" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Add Amount to withdraw" required/>
                         <label class="fieldset-legend fieldset-label">Pin Number</label>
@@ -98,10 +99,19 @@
                 </div>
               </div> 
         </section>
+
+        <section id="transaction-box" class="mt-10">
+          <h2 class="text-lg font-semibold px-8 pb-4">Transactions History</h2>
+          <div id="transContainer" class="px-8">
+            
+          </div>
+        </section>
     </section>
 
+    <script src="./utilities/utilities.js"></script>
     <script src="./script/addmoney.js"></script>
-    <script src="./script/toggle.js"></script>
+    <script src="./utilities/toggle.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/transaction.js"></script>
 </body>
 </html>
