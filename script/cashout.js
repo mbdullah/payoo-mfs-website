@@ -21,14 +21,13 @@ document.getElementById('cashout-btn')
         if(pin === 1234){
           const sum = mainBalance - amount ;
           setInnerTextByIdAndValue('main-balance', sum);
+          
           const container = document.getElementById("transContainer");
-      const selectBank = document.getElementById("selected-bank").value;
-      
       const div = document.createElement("div")
       div.classList.add("bg-base-100", "rounded-2xl")
       div.innerHTML = `
       <div class = "p-4 mb-4">
-      <p>Cash Out from ${selectBank}</p>
+      <p>Cash Out</p>
       <p>TK : ${amount}</p>
       <p>Account number : ${accountNumber}</p>
       </div>
