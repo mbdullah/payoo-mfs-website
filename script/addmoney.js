@@ -28,6 +28,7 @@ document.getElementById('addmoney-btn')
      const pinNumber = getInputValueById('pin-number');
      const accountNumber = document.getElementById('account-number').value;
      const mainBalance = getInnerTextById('main-balance');
+     
      const transId1 = Math.floor(Math.random() * (5000));
     const transId2 = Math.floor(Math.random() * (5000));
     const transId3 = Math.floor(Math.random() * (5000));

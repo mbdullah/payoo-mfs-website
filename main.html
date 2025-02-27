@@ -38,7 +38,7 @@
                         <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
                         <p>Get Bonus</p>
                     </div>
-                    <div class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-gray-100">
+                    <div id="pay-bill-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-gray-100">
                         <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
                         <p>Pay Bill</p>
                     </div>
@@ -61,6 +61,7 @@
                               <option disabled selected>Pick a option</option>
                               <option>Bkash</option>
                               <option>Nagod</option>
+                              <option>Rocket</option>
                               <option>SIBL</option>
                             </select>
                           </fieldset>
@@ -71,7 +72,7 @@
                         <input id="amount" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Add Amount to withdraw" required/>
                         <label class="fieldset-legend fieldset-label">Pin Number</label>
                         <input id="pin-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 4 digit pin number" required />
-                        <button id="addmoney-btn" class="btn btn-neutral mt-4 bg-blue-800 border-none rounded-3xl">Add Money</button>
+                        <button id="addmoney-btn" class="btn btn-neutral mt-4 bg-blue-600 border-none rounded-3xl">Add Money</button>
                       </fieldset>
                     </form>
                   </div>
@@ -92,19 +93,12 @@
                         <input id="cashout-amount" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter amount to withdraw" required/>
                         <label class="fieldset-legend fieldset-label">Pin Number</label>
                         <input id="cashout-pin" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 4 digit pin number" required />
-                        <button id="cashout-btn" class="btn btn-neutral mt-4 bg-blue-800 border-none rounded-3xl">Withdraw Money</button>
+                        <button id="cashout-btn" class="btn btn-neutral mt-4 bg-blue-600 border-none rounded-3xl">Withdraw Money</button>
                       </fieldset>
                     </form>
                   </div>
                 </div>
               </div> 
-        </section>
-
-        <section id="transaction-box" class="mt-10">
-          <h2 class="text-lg font-semibold px-8 pb-4">Transactions History</h2>
-          <div id="transContainer" class="px-8">
-            
-          </div>
         </section>
 
         <section id="transfer-box" class="mt-10">
@@ -120,7 +114,7 @@
                     <input id="transfer-amount" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter amount to transfer" required/>
                     <label class="fieldset-legend fieldset-label">Pin Number</label>
                     <input id="transfer-pin" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 4 digit pin number" required />
-                    <button id="transfer-btn" class="btn btn-neutral mt-4 bg-blue-800 border-none rounded-3xl">Send Now</button>
+                    <button id="transfer-btn" class="btn btn-neutral mt-4 bg-blue-600 border-none rounded-3xl">Send Now</button>
                   </fieldset>
                 </form>
               </div>
@@ -137,21 +131,60 @@
                   <fieldset class="fieldset">
                     <label class="fieldset-legend fieldset-label">Enter Bonus Coupon</label>
                     <input id="bonus-pin" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter your coupon" required />
-                    <button id="get-bonus-btn" class="btn btn-neutral mt-4 bg-blue-800 border-none rounded-3xl">Get Bonus</button>
+                    <button id="get-bonus-btn" class="btn btn-neutral mt-4 bg-blue-600 border-none rounded-3xl">Get Bonus</button>
                   </fieldset>
                 </form>
               </div>
             </div>
           </div>
         </section>
+
+        <section id="transaction-box" class="mt-10">
+          <h2 class="text-lg font-semibold px-8 pb-4">Transactions History</h2>
+          <div id="transContainer" class="px-8">
+            
+          </div>
+        </section>
+
+        <section id="pay-bill-box" class="mt-10">
+          <h3 class="text-lg font-semibold px-8">Pay Bill</h3>
+            <div>
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="card w-full max-w-sm bg-base-100 rounded-2xl">
+                    <form class="card-body">
+                        <fieldset class="fieldset">
+                            <legend class="fieldset-legend text-gray-500">Select To Pay</legend>
+                            <select id="selected-bank2" class="select border-none bg-gray-100 rounded-3xl">
+                              <option disabled selected>Select back</option>
+                              <option>Bkash</option>
+                              <option>Nagod</option>
+                              <option>Rocket</option>
+                              <option>SIBL</option>
+                            </select>
+                          </fieldset>
+                      <fieldset class="fieldset">
+                        <label class="fieldset-legend fieldset-label">Biller Account Number</label>
+                        <input id="biller-account-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 11 digit account number" required/>
+                        <label class="fieldset-legend fieldset-label">Amount to Pay</label>
+                        <input id="pay-amount" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Add Amount to pay" required/>
+                        <label class="fieldset-legend fieldset-label">Pin Number</label>
+                        <input id="pay-pin-number" type="number" class="input border-none bg-gray-100 rounded-3xl px-5" placeholder="Enter 4 digit pin number" required />
+                        <button id="pay-bill-btn" class="btn btn-neutral mt-4 bg-blue-600 border-none rounded-3xl">Pay Now</button>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div> 
+        </section>
     </section>
 
     <script src="./utilities/utilities.js"></script>
-    <script src="./script/addmoney.js"></script>
     <script src="./utilities/toggle.js"></script>
+    <script src="./script/addmoney.js"></script>
     <script src="./script/cashout.js"></script>
-    <script src="./script/transaction.js"></script>
     <script src="./script/transfer.js"></script>
     <script src="./script/getBonus.js"></script>
+    <script src="./script/payBill.js"></script>
+    <script src="./script/transaction.js"></script>
 </body>
 </html>

@@ -16,6 +16,7 @@ document.getElementById('get-bonus-btn')
       <div class = "p-4 mb-4">
       <p>You Got Bonus</p>
       <p>TK : ${bonusAmount}</p>
+      <p>Thanks for connect with me...!</p>
       </div>
       `
       container.appendChild(div);
