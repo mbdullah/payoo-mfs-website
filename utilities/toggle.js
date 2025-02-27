@@ -62,3 +62,9 @@ document.getElementById("pay-bill-card").addEventListener('click', function(){
     handleToggle('get-bonus-box', "none");
     handleToggle('pay-bill-box', "block");
 })
+
+
+// logout btn====>
+    document.getElementById('logout-btn').addEventListener('click', function( ) {
+        window.location.href = "./index.html"
+    })

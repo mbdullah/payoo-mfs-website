@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
+    <script src="https://kit.fontawesome.com/3371290e81.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -11,40 +12,42 @@
     <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-100">
         <header>
             <nav class="flex justify-around items-center bg-base-100 py-5">
-                <img class="w-16" src="./assets/Group.png" alt="">
+                <div class="flex gap-2">
+                  <img class="w-16" src="./assets/Group.png" alt="">
                 <div>
                     <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
-                    <p class="border rounded p-1">Available Balance</p>
+                    <p class=" font-serif text-gray-500">Available Balance</p>
                 </div>
-                <button class="btn">LogOut</button>
+                </div>
+                <button id="logout-btn" class="text-gray-500 btn bg-base-100 rounded-xl font-normal hover:bg-slate-300 hover:border-blue-600 hover:text-blue-600 hover:font-semibold">LogOut<i class="fa-solid fa-right-from-bracket"></i></button>
             </nav>
             <section class="pt-10 px-2 bg-base-100 mt-[1px]">
-                <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
-                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                <h1 class="text-3xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
+                <p class="px-3 text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
                 <div class="cards grid grid-cols-3 mt-14 gap-2 pb-10">
-                    <div id="addmoney-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-gray-100 ">
+                    <div id="addmoney-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-blue-100 hover:border-blue-600">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
-                        <p>Add Money</p>
+                        <p class="text-gray-500 hover:font-semibold hover:text-blue-600">Add Money</p>
                     </div>
-                    <div id="cashout-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-gray-100">
+                    <div id="cashout-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-blue-100 hover:border-blue-600">
                         <img class="w-8 mx-auto" src="./assets/money1.png" alt="">
-                        <p>Cashout</p>
+                        <p class="text-gray-500 hover:font-semibold hover:text-blue-600">Cashout</p>
                     </div>
-                    <div id="transfer-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] py-4 px-2 cursor-pointer hover:bg-gray-100">
+                    <div id="transfer-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] py-4 px-2 cursor-pointer hover:bg-blue-100 hover:border-blue-600">
                         <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
-                        <p>Transfer Money</p>
+                        <p class="text-gray-500 hover:font-semibold hover:text-blue-600">Transfer Money</p>
                     </div>
-                    <div id="get-bonus-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-gray-100">
+                    <div id="get-bonus-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-blue-100 hover:border-blue-600">
                         <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
-                        <p>Get Bonus</p>
+                        <p class="text-gray-500 hover:font-semibold hover:text-blue-600">Get Bonus</p>
                     </div>
-                    <div id="pay-bill-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-gray-100">
+                    <div id="pay-bill-card" class="text-center box border-[2px] border-gray-200 rounded-[12px] p-4 cursor-pointer hover:bg-blue-100 hover:border-blue-600">
                         <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
-                        <p>Pay Bill</p>
+                        <p class="text-gray-500 hover:font-semibold hover:text-blue-600">Pay Bill</p>
                     </div>
-                    <div class="text-center box border-[2px] border-gray-200 rounded-[12px] py-4 px-2 cursor-pointer hover:bg-gray-100">
+                    <div class="text-center box border-[2px] border-gray-200 rounded-[12px] py-4 cursor-pointer hover:bg-blue-100 hover:border-blue-600">
                         <img id="transactions-card" class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
-                        <p>Transactions</p>
+                        <p class="text-gray-500 hover:font-semibold hover:text-blue-600">Transactions</p>
                     </div>
                 </div>
             </section>
