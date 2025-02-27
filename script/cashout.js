@@ -13,6 +13,10 @@ document.getElementById('cashout-btn')
     const amount = getInputValueById('cashout-amount');
     const mainBalance = getInnerTextById('main-balance');
 
+    const transId1 = Math.floor(Math.random() * (5000));
+    const transId2 = Math.floor(Math.random() * (5000));
+    const transId3 = Math.floor(Math.random() * (5000));
+
     if(amount > mainBalance){
       alert("Please input A valid amount")
       return;
@@ -30,6 +34,7 @@ document.getElementById('cashout-btn')
       <p>Cash Out</p>
       <p>TK : ${amount}</p>
       <p>Account number : ${accountNumber}</p>
+      <p>Transaction ID : XB${transId1}R${transId2}MS${transId3}N </p>
       </div>
       `
       container.appendChild(div);

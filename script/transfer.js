@@ -7,6 +7,10 @@ document.getElementById("transfer-btn")
    const mainBalance = getInnerTextById("main-balance");
    console.log(accountNumber,pin,amount,mainBalance);
 
+   const transId1 = Math.floor(Math.random() * (5000));
+    const transId2 = Math.floor(Math.random() * (5000));
+    const transId3 = Math.floor(Math.random() * (5000));
+
    if(amount > mainBalance || amount <= 0){
     alert("Please Input A Valid Amount")
     return;
@@ -24,6 +28,7 @@ document.getElementById("transfer-btn")
       <p>Transfer Money</p>
       <p>TK : ${amount}</p>
       <p>Account number : ${accountNumber}</p>
+      <p>Transaction ID : S${transId1}MR${transId2}N${transId3}RB </p>
       </div>
       `
       container.appendChild(div);

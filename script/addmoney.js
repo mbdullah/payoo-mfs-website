@@ -28,6 +28,9 @@ document.getElementById('addmoney-btn')
      const pinNumber = getInputValueById('pin-number');
      const accountNumber = document.getElementById('account-number').value;
      const mainBalance = getInnerTextById('main-balance');
+     const transId1 = Math.floor(Math.random() * (5000));
+    const transId2 = Math.floor(Math.random() * (5000));
+    const transId3 = Math.floor(Math.random() * (5000));
 
      if(amount < 0){
       alert("Please input A valid amount")
@@ -49,6 +52,7 @@ document.getElementById('addmoney-btn')
       <p>Add money from ${selectBank}</p>
       <p>TK : ${amount}</p>
       <p>Account number : ${accountNumber}</p>
+      <p>Transaction ID : TR${transId1}FB${transId2}CD${transId3}X </p>
       </div>
       `
       container.appendChild(div);
